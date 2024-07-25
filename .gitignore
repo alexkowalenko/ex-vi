@@ -1,0 +1,8 @@
+*.o
+ex
+vi
+expreserve
+exrecover
+libterm/libtermlib.a
+
+.vscode/*

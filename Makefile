@@ -130,7 +130,7 @@ INSTALL		= /usr/ucb/install
 #
 # If your system expands tabs to 4 spaces you should -DTABS=4 below
 #
-FEATURES	= -DLISPCODE -DCHDIR -DFASTTAG -DUCVISUAL -DMB -DBIT8
+FEATURES	= -DLISPCODE -DCHDIR -DFASTTAG -DUCVISUAL -DBIT8
 
 #
 # This disables the LC_CTYPE locale settings and assumes all characters
@@ -161,9 +161,9 @@ FEATURES	= -DLISPCODE -DCHDIR -DFASTTAG -DUCVISUAL -DMB -DBIT8
 # (wchar.h, wctype.h, btowc() etc.) which is not provided by older
 # compilation environments.
 #
-REINC	= -I./libuxre -DUXRE
-RELIB	= -L./libuxre -luxre
-RETGT	= uxre
+#REINC	= -I./libuxre -DUXRE
+#RELIB	= -L./libuxre -luxre
+#RETGT	= uxre
 
 #
 # VMUNIX should be correct for any modern Unix.
@@ -190,7 +190,7 @@ OSTYPE	= -DVMUNIX
 # raises this limit to around 1 GB, but ex will consume much more of core
 # and temp file space then.
 #
-#LARGEF	= -DLARGEF
+LARGEF	= -DLARGEF
 
 # 
 # The next setting is a crucial one since it determines the way ex
@@ -211,7 +211,7 @@ OSTYPE	= -DVMUNIX
 # provide a good termcap file, or when setting the TERMCAP environment
 # variable is deemed sufficient, is the included 2.11BSD termcap library.
 #
-TERMLIB	= termlib
+TERMLIB	= ncurses
 
 #
 # Since ex uses sbrk() internally, a conflict with the libc's version of
