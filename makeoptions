@@ -81,7 +81,7 @@
 #
 trap "rm -f /tmp/ex_foo$$.c /tmp/ex_bar$$.c" 0
 trap '' 2
-cat < ex_data.c > /tmp/ex_bar$$.c
+cat < src/ex_data.c > /tmp/ex_bar$$.c
 ex -s /tmp/ex_bar$$.c <<\!
 	g/^#include/d
 	w
@@ -118,6 +118,6 @@ ex -s /tmp/ex_foo$$.c <<\!
 	0a
 	/* sccs id   @(#)ex_vars.h makeoptions	1.8 (gritter) 7/1/02 */
 .
-	w! ex_vars.h
+	w! src/ex_vars.h
 	q
 !
